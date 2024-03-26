@@ -1,0 +1,60 @@
+swagger: "2.0"
+info:
+  title: coe453hw3
+  description: Arethmatics API.
+  version: 1.0.0
+
+host: myapihw3.apigateway.coe453-assigment.cloud.goog
+basePath: /
+schemes:
+  - https
+  - http
+
+paths:
+  /add:
+    post:
+      operationId: postAddition
+      summary: perform addition.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-coe453-assigment.cloudfunctions.net/Addition
+  
+  /sub:
+    post:
+      operationId: postSubtraction
+      summary: perform subtraction.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-coe453-assigment.cloudfunctions.net/Subtraction
+  /mul:
+    post:
+      operationId: postMultiplication
+      summary: perform multiplication.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-coe453-assigment.cloudfunctions.net/Multiplication
+  /div:
+    post:
+      operationId: postDivision
+      summary: perform division.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-coe453-assigment.cloudfunctions.net/Division
+
+
